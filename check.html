@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    	 <link href="./css/common.css" rel="stylesheet"/>
+        <title>관리소장 수시지원 시스템</title>
+	    <style>
+		     h2  {
+				padding-left: 0px;
+				margin-top: 0px;
+				margin-bottom:30px;
+			 } 
+			 
+			 input , select {
+		       	width: 342px !important;
+		        margin: 10px 0px 10px 20px;
+			 }
+			 
+			 .divmargin {
+				margin-top:170px; 
+				margin-bottom:30px; 
+			 }	
+			 
+			 .grid {
+					font-size: 14px; 
+				}
+					
+			 .grid td {
+				    padding: 5px 0px !important;
+				}		
+				 
+				
+			@media (max-width:1540px) {  
+				.divmargin {
+				margin-top:110px !important; 
+			}
+			}
+				
+	    </style>
+</head>
+    
+    <body>
+		
+		<!--  header  -->
+		<div class="logo" style="min-width:1100px;">
+			<div class="d-flex">
+				<img src="./image/logo.png" alt="우리관리 로고" style="width: 150px;">
+				<h1>관리소장 수시지원 시스템</h1>
+			</div>
+			
+			<div class="text-center d-flex navihover" style="position: relative; cursor:pointer;">
+				<div style="width:45px; height:45px; border:1px solid #13a15a;; border-radius:45px; background-color:#13a15a;; color:#fff; position: relative;">
+					<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size:19px;">WG</span>
+				</div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#7d7d7d" style="margin:15px 0 0 5px;" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+					<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				</svg>
+				
+				<!-- 네비게이션메뉴 -->
+		
+				<div class="border navimenu text-left" >
+					 <a href="./resetPW.html" class="d-block" style="color:#000; text-decoration: none; padding:10px 0 7px 15px;">비밀번호 재설정</a>
+					 <a href="#" class="d-block" style="color:#000; text-decoration: none; padding:7px 0 10px 15px;">로그아웃</a>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		 <!-- body --> 
+
+			<div class="d-flex justify-content-center align-items-center divmargin" style="min-width:1127px;">
+		  		<div>
+
+				    <form>
+				    
+				      <h2 style="padding-left: 8px;">지원내역 조회</h2>	
+				      
+				    	<table>
+							<tbody>
+							  <tr>
+							  <!-- 조회기간 -->
+							    <td style="padding:0 61px 0 0;">
+							    	<span style="color:#555; font-size:14px; display:inline-flex;">조회기간</span>
+					        		<input type="date" id="viewperiod" style="width: 160px !important;"> ~
+					        		<input type="date" id="viewperiod2" style="margin-left:0; width: 160px !important;">
+							    </td>
+							    
+							    <!-- 이름 -->
+							    <td style="padding-left: 120px;">
+							    	<span style="color:#555; font-size:14px; display:inline-flex;">이름</span>
+					        		<input type="text" id="checkname" style="margin-left: 47px;">
+							    </td>
+							  </tr>
+							  
+							  <tr>
+							  	<!-- 이메일 -->
+							    <td style="padding-left: 0;">
+							    	<span style="color:#555; font-size:14px; display:inline-flex;">이메일</span>
+					        		<input type="email" id="checkmail" style="margin-left: 34px;">
+							    </td>
+							    
+							    <!-- 합격여부 -->
+							    <td style="padding-left: 120px;">
+							    	<span style="color:#555; font-size:14px; display:inline-flex;">합격여부</span>
+					        		<select id="passornot" name="passornot" value="0">
+			       						<option value="-">전체</option>
+			       						<option value="1">합격</option>
+			       						<option value="2">불합격</option>
+		       						</select>
+							    </td>
+							  </tr>
+							</tbody>
+						</table>
+						
+						
+						
+						<table class="grid">
+							<colgroup>
+								<col width="100px">
+								<col width="150px">
+								<col width="100px">
+								<col width="180px">
+								<col width="250px">
+								<col width="110px">
+								<col width="150px">
+							</colgroup>
+							<thead>
+							  <tr>
+							    <th>NO.</th>
+							    <th>이름</th>
+							    <th>성별</th>
+							    <th>생년월일</th>
+							    <th>이메일</th>
+							    <th>지원서</th>
+							    <th>합격여부</th>
+							  </tr>
+							</thead>
+							
+							
+							<!-- 테이블내용 -->
+							<tbody>
+							  <!-- 데이터가 있을 경우 -->
+							  
+							  	<!-- 첫번째 테이블 -->
+							  <tr>
+							    <td>1</td>
+							    <td>홍길동</td>
+							    <td>남</td>
+							    <td>1900.01.12</td>
+							    <td>gilhong@test.net</td>
+							    <td>
+							    	<button class="btn" type="button" style="background-color: #13a15a; font-size: 13px;color: #fff; padding: 4px 11px;">보기</button>
+							    </td>
+							    <td>
+							    	<select id="passornot2" name="passornot2" value="0" style="width:90px !important; margin:0px !important">
+			       						<option value="-">선택</option>
+			       						<option value="1">합격</option>
+			       						<option value="2">불합격</option>
+		       						</select>
+							    </td>
+							  </tr>
+							  
+							  	<!-- 두번째 테이블 -->
+							  <tr>
+							  	<td>2</td>
+							    <td></td>
+							    <td></td>
+							    <td></td>
+							    <td></td>
+							    <td>
+							    	<button class="btn" type="button" style="background-color: #13a15a; font-size: 13px;color: #fff; padding: 4px 11px;">보기</button>
+							    </td>
+							    <td>
+							    	<select id="passornot2" name="passornot2" value="0" style="width:90px !important; margin:0px !important">
+			       						<option value="-">선택</option>
+			       						<option value="1">합격</option>
+			       						<option value="2">불합격</option>
+		       						</select>
+							    </td>
+							  </tr>
+							  					  
+							  
+							  <!-- 데이터가 없을 경우 -->
+							  <tr style="display:none;">
+		       					<td colspan="7" style="padding: 10px 15px !important;">등록된 데이터가 없습니다.</td>
+		       				  </tr>
+							</tbody>
+						</table>
+						
+				    </form>
+				    
+				    
+				    <!-- 페이지네이션 -->
+				    <nav class="mt-4">
+					  <ul class="pagination pagination-sm justify-content-center">
+					   		<li class="page-item">
+						      	<a class="page-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+									  <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+									</svg></a>
+						    </li>
+						    <li class="page-item">
+						      	<a class="page-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+									</svg></a>
+						    </li>
+						    
+						    
+						    <li class="page-item"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    
+						    
+						    <li class="page-item">
+						      	<a class="page-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg></a>
+						    </li>
+						    <li class="page-item">
+						      	<a class="page-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+									  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+									  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+									</svg></a>
+						    </li>
+					  </ul>
+					</nav>
+
+		  	 	</div>
+		  	</div>
+
+    
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    
+    
+    
+	
+</html>
+
+

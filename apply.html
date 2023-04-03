@@ -1,0 +1,2341 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="./css/common.css" rel="stylesheet"/>
+        <title>관리소장 수시지원 시스템</title>
+	    
+</head>
+    
+    <body>
+		
+		<!--  header  -->
+		<div class="logo">
+			<div class="d-flex">
+				<img src="./image/logo.png" alt="우리관리 로고" style="width: 150px;">
+				<h1>관리소장 수시지원 시스템</h1>
+			</div>
+			
+			<div class="text-center d-flex navihover" style="position: relative; cursor:pointer;">
+				<div style="width:45px; height:45px; border:1px solid #13a15a;; border-radius:45px; background-color:#13a15a;; color:#fff; position: relative;">
+					<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size:19px;">WG</span>
+				</div>
+				<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#7d7d7d" style="margin:15px 0 0 5px;" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+					<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+				</svg>
+				
+				<!-- 네비게이션메뉴 -->
+		
+				<div class="border navimenu text-left" >
+					 <a href="./resetPW.html" class="d-block" style="color:#000; text-decoration: none; padding:10px 0 7px 15px;">비밀번호 재설정</a>
+					 <a href="#" class="d-block" style="color:#000; text-decoration: none; padding:7px 0 10px 15px;">로그아웃</a>
+				</div>
+			</div>
+		</div>	
+		
+		
+		 <!-- body --> 
+		<div class="inner">
+		
+		<div>
+			<h2>지원서 작성</h2>
+		</div>
+		
+		
+        <form>
+         <!-- 인적사항 -->
+          <div class="row mx-0 pt-2 pl-0 pb-2">
+			<div class="col-12 col-lg-12 px-0">
+				<h3>
+				<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;인적사항
+				</h3>
+				
+				<div class="table-responsive d-flex">
+					<div style="padding-left:40px;">
+						<div class="border text-center" style="background-color: #fff; width: 140px; height: 165px; margin:10px 15px 0 0;">
+							<!-- 사진 등록 전  -->
+							<div style="position:relative; background-color:#f4f4f4; width:138px; height:163px;">
+								<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#bfc3c7" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" class="bi bi-image" viewBox="0 0 16 16">
+									<path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+									<path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+								</svg>
+							</div>
+							
+							<!-- 사진 등록 후  -->
+								<div style="display:none;">
+									<img src="../assets/images/human.jpg" alt="이력서사진" style="width: 120px; height: 160px; padding:6px 0 0;">
+								</div>		
+						</div>
+						
+						<button class="btn btn-sm btn-primary" type="button" style="font-size:13px; width:140px; margin:5px 0; font-weight:bold;">사진 등록</button>
+						<span style="display:block; font-size:11px; width:140px;"> * 사진 파일은 10MB 미만의 <br>JPG, GIF 파일만 업로드 가능</span>
+					</div>
+					
+					<div>
+						<div class="d-flex" style="padding: 13px 0 0 20px;">
+							<div><span style="font-size:19px; font-weight:bold; padding: 0 5px 13px 0; vertical-align: baseline;">홍길동</span></div>
+							<div style="padding-left:15px;">
+								<p>남</p>
+								<p>1900.01.12</p>
+								<p>gilhong@test.net</p>
+							</div>
+						</div>
+						<table style="margin-top: 13px;">
+							<colgroup>
+								<col width="10%">
+								<col width="30%">
+								<col>
+							</colgroup>
+							<tbody>
+							<tr>
+								<td style="padding: 0 10px;">
+										<span style="font-size: 14px; font-weight:bold;">휴대폰</span>
+										<input type="text" name="tel" id="tel" style="width:68px; margin-left: 30px;"> -
+										<input type="text" name="tel2" id="tel2" style="width:68px; margin-left: 0;"> -
+										<input type="text" name="tel3" id="tel3" style="width:72px; margin-left: 0;">
+								</td>
+								<td style="padding-left: 51px;">
+										<span style="font-size: 14px; font-weight:bold;">자택전화</span>
+										<input type="text" name="phone" id="phone" style="width:68px"> -
+										<input type="text" name="phone2" id="phone2" style="width:68px; margin-left: 0;"> -
+										<input type="text" name="phone3" id="phone3" style="width:70px; margin-left: 0;">
+								</td>
+							</tr>
+							
+							<tr>
+								<td colspan="2" style="padding: 0 10px;">
+										<span style="font-size: 14px; font-weight:bold;">실거주지</span>
+										<input type="text" name="address" id="address" style="width: 193px !important;" disabled>
+										<button class="btn btn-sm btn-primary" type="button" style="font-size:14px; padding: 7px 10px4px; vertical-align: initial;">검색</button>
+								</td>
+							</tr>
+								
+							<tr>
+								<td colspan="2" style="padding: 0 10px;">
+										<input type="text" name="address2" id="address2" style="width: 246px !important; margin:0 0 0 75px!important;"  disabled>
+										<input type="text" name="address3" id="address3" style="width: 375px !important; margin-left: 0;" placeholder="상세주소를 입력해주세요">
+								</td>
+							</tr>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+        <!-- 병역 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+            <h3 style="margin-top:0"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;병역사항</h3>
+            <div class="table-responsive">
+				<table>
+					<colgroup>
+						<col width="30%">
+						<col width="30%">
+						<col>
+
+					</colgroup>
+					<tbody>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">병역여부</span>
+								<select id="militaryservice" name="militaryservice" value="0" style="width:220px">
+		       						<option value="-">해당없음/면제</option>
+		       						<option value="1">군필</option>
+		       						<option value="2">미필</option>
+		       						<option value="3">복무중</option>
+		       					</select>
+						  </td>
+						  <td colspan="3" style="padding-left: 98px;">
+						  		<span style="font-size: 14px; font-weight:bold;">복무기간</span>
+	                            <input type="date" name="enlist" id="enlist" disabled> -
+	                            <input type="date" name="discharge" id="discharge" style="margin-left: 0;" disabled>
+						  </td>
+						</tr>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">군별</span>
+	                            <input type="text" name="bycounty" id="bycounty" style="margin-left: 33px;" disabled>
+						  </td>
+						  <td style="padding-left: 0;">
+						  		<span style="font-size: 14px; font-weight:bold;">계급</span>
+	                            <input type="text" name="classes" id="classes" disabled>
+						  </td>
+						  <td style="padding-left: 30px;">
+						  		<span style="font-size: 14px; font-weight:bold;">병과</span>
+	                            <input type="text" name="class" id="class" disabled>
+						  </td>
+						</tr>
+					</tbody>
+				</table>
+			 </div>
+		  </div>
+        </div>
+
+
+
+        <!-- 보훈여부 -->
+        <div class="row mx-0 pt-2 pl-0">
+       	 <div class="col-12 col-lg-12 px-0">
+            <h3><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;보훈여부</h3>
+            <div class="table-responsive">
+	            <table>
+					<colgroup>
+						<col width="10%">
+						<col width="45%">
+					</colgroup>
+					<tbody>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">보훈여부</span>
+							  	<select id="veteranstatus" name="veteranstatus" value="0" style="width:250px; margin-left: 25px;">
+		       						<option value="-">해당없음</option>
+		       						<option value="1">해당</option>
+		       					</select>
+		       			  </td>
+						  <td style="padding-left: 147px;">
+						  		<span style="font-size: 14px; font-weight:bold;">보훈번호</span>
+	                            <input type="text" name="veteransnumber" id="veteransnumber" style="width:250px; margin-left: 33px;" disabled>
+						  </td>
+						  
+		       			 </tr>
+		       			 
+						<tr>
+						  <td>
+						  	  <span style="font-size: 14px; font-weight:bold;">보훈관계</span>
+								<select id="veteransrelationship" name="veteransrelationship" value="0" style="width:250px; margin-left: 25px;" disabled>
+		       						<option value="-">선택하세요</option>
+		       						<option value="1">본인</option>
+		       						<option value="2">배우자</option>
+		       						<option value="3">자녀</option>
+		       						<option value="4">부모</option>
+		       						<option value="5">조부모</option>
+		       					</select>
+		       			  </td>
+						  <td style="padding-left: 147px;">
+						  		<span style="font-size: 14px; font-weight:bold;">보훈관청명</span>
+	                            <input type="text" name="administration" id="administration" style="width:250px; margin-left: 18px;" disabled>
+						  </td>
+						</tr>
+					</tbody>
+				</table>
+			 </div>	
+          </div>
+        </div>
+
+
+
+        <!-- 장애 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+	            <h3><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;장애여부</h3>
+	            <div class="table-responsive">
+		            <table>
+						<colgroup>
+							<col width="8%">
+							<col width="20%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+							  <td>
+							  		<span style="font-size: 14px; font-weight:bold;">장애여부</span>
+								  	<select id="disability" name="disability" style="margin-left: 6px; width:169px;" value="0">
+			       						<option value="-">해당없음</option>
+			       						<option value="1">해당</option>
+			       					</select>
+			       			  </td>  
+							  <td style="padding-left:8px;">
+							  		<span style="font-size: 14px; font-weight:bold;">장애인등록번호</span>
+		                            <input type="text" name="registrationnumber" style="margin-left: 6px; width:169px;" id="registrationnumber" disabled>
+							  </td>
+							  <td style="padding-left:11px;">
+							  		<span style="font-size: 14px; font-weight:bold;">장애종류 및 등급</span>
+		                            <input type="text" name="disabilitygrade" style="margin-left: 6px; width:170px;" id="disabilitygrade" disabled>
+							  </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</div>
+        </div>
+
+
+
+
+        <!-- 학력사항 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+            <h3 style="padding-bottom:0;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;학력사항 <span style="color:#f00; font-size: 20px; vertical-align: middle;">*</span></h3>
+	          <form>
+	             <div class="table-responsive">
+		            <table style="margin-bottom:20px !important;">
+						<colgroup>
+							<col width="8%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								  <td>
+								  		<span style="font-size: 14px; font-weight:bold;">구분</span>
+									  	<select id="school" name="school" value="0" style="margin-left: 29px;">
+				       						<option value="-">선택하세요</option>
+				       						<option value="1">고등학교</option>
+				       						<option value="2">대학교(2,3년)</option>
+				       						<option value="3">대학교(4년)</option>
+				       						<option value="4">대학교(석사)</option>
+				       						<option value="5">대학교(박사)</option>
+				       					</select>
+				       			  </td>  
+								  <td style="padding-left: 59px;">
+								  		<span style="font-size: 14px; font-weight:bold;">재학기간</span>
+			                            <input type="date" name="admission" id="admission" style="width:146px; margin-left: 43px;"> -
+			                            <input type="date" name="graduate" id="graduate" style="margin-left:0; width:146px;">
+								  </td>
+							</tr>
+							<tr>
+								  <td>
+								  		<span style="font-size: 14px; font-weight:bold;">학교명</span>
+			                            <input type="text" name="schoolname" id="schoolname" style="width:310px;">
+								  </td>
+								  <td style="padding-left: 58px;">
+								  		<span style="font-size: 14px; font-weight:bold;">전공(학과/부)</span>
+			                            <input type="text" name="department" id="department" style="width:310px;">
+								  </td>
+							  </tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="d-flex justify-content-end" style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:5px;">삭제</button>
+				</div>
+				</form>
+				<div>
+		       		<table class="grid">
+		       			<colgroup>
+		       				<col style="width:100px">
+		       				<col style="width:200px">
+		       				<col style="width:200px">
+		       				<col style="width:250px">
+		       				<col style="width:246px">
+		       			</colgroup>
+		       				<thead>
+		       					<tr>
+		       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">구분</th>
+		       						<th scope="col">입학년월</th>
+		       						<th scope="col">졸업년월</th>
+		       						<th scope="col">학교명</th>
+		       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">전공(학과/부)</th>
+		       					</tr>
+		       				</thead>
+		       				<tbody style="display:none;">
+		       					<tr>
+		       						<td colspan="5">등록된 데이터가 없습니다.</td>
+		       					</tr>
+		       				</tbody>
+		       				<tbody style="display:none;">
+		       					<tr>
+		       						<td class="gridtext">대학교</td>
+		       						<td class="gridtext">20230303</td>
+		       						<td class="gridtext">20300303</td>
+		       						<td class="gridtext">서울대학교</td>
+		       						<td class="gridtext">국문과</td>
+		       					</tr>
+		       				</tbody>
+		       			</table>
+		       		  </div>
+		       		</div>
+	       		</div>
+
+
+
+
+		<!-- 자격사항 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+            <h3 style="padding-bottom:0;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;자격사항 <span style="color:#f00; font-size: 20px; vertical-align: middle;">*</span></h3>
+            <form>
+               <div class="table-responsive">
+	            <table style="margin-bottom:20px !important;">
+					<colgroup>
+						<col width="8%">
+						<col width="25%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">자격명</span>
+							  	<input type="text" name="certificatename" id="certificatename" style="margin-left: 5px;">
+		       			  </td>  
+						  <td style="padding-left:46px">
+						  		<span style="font-size: 14px; font-weight:bold;">발행기관</span>
+	                            <input type="text" name="issuer" id="issuer" style="margin-left: 5px;">
+						  </td>
+						  <td style="padding-left:66px">
+						  		<span style="font-size: 14px; font-weight:bold;">취득일</span>
+	                            <input type="date" name="acquisition" id="acquisition" style="margin-left: 5px;">
+						  </td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="d-flex justify-content-end"  style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:5px;">삭제</button>
+				</div>
+			</form>
+			
+			<div>
+	       		<table class="grid">
+		       			<colgroup>
+							<col width="333px">
+							<col width="333px">
+							<col width="330px">
+							<col>
+						</colgroup>
+	       				<thead>
+	       					<tr>
+	       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">자격명</th>
+	       						<th scope="col">발행기관</th>
+	       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">취득일</th>
+	       					</tr>
+	       				</thead>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td colspan="3">등록된 데이터가 없습니다.</td>
+	       					</tr>
+	       				</tbody>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td class="gridtext">워드프로세서1급</td>
+	       						<td class="gridtext">대한상공회의소</td>
+	       						<td class="gridtext">230303</td>
+	       					</tr>
+	       				</tbody>
+	       			</table>
+	       		</div>
+	       	</div>
+        </div>
+
+
+
+
+
+        <!-- 경력사항 -->
+        <div class="row mx-0 pt-2 pl-0">
+       	 <div class="col-12 col-lg-12 px-0">
+            <h3 style="padding-bottom:0;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;경력사항  <span style="color:#f00; font-size: 20px; vertical-align: middle;">*</span></h3>
+            
+            
+            <!-- 동종업계 경력 -->
+            <div>
+            	<h4> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" style="vertical-align: top;" viewBox="0 0 16 16">
+					  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+					</svg> 동종업계 경력 (필수)</h4>
+            	<form>
+            	<div class="table-responsive">
+		            <table style="margin:15px 20px !important;">
+						<colgroup>
+							<col width="12%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+							  <td>		
+							  		<span style="font-size: 14px; font-weight:bold;">사업장명</span>
+							  	  	<input type="text" name="buisnessname" id="buisnessname" style="margin-left: 40px; width:310px;">
+			       			  </td>  
+							  <td colspan="3" style="padding-left: 31px;">
+							  		<span style="font-size: 14px; font-weight:bold;">사업장구분</span>
+								  	<select id="buisnessdivision" name="buisnessdivision" value="0"  style="width:310px;">
+			       						<option value="-">선택하세요</option>
+			       					</select>
+			       			  </td> 
+							</tr>
+							<tr>
+							  <td>
+							  		<span style="font-size: 14px; font-weight:bold;">관리회사명</span>
+								  	<input type="text" name="officename" id="officename" style="width:310px; margin-left: 27px;">
+			       			  </td> 
+							  <td style="padding-left: 31px;">
+							  		<span style="font-size: 14px; font-weight:bold;">근무기간</span>
+								  	<input type="date" name="joindate" id="joindate" style="width:146px; margin-left: 20px;"> -
+		                            <input type="date" name="departuredate" id="departuredate" style="margin-left:0; width:146px;">
+							  </td>
+							</tr>
+							<tr>
+							  <td>
+							  		<span style="font-size: 14px; font-weight:bold;">세대수</span>
+								  	<input type="text" name="household" id="household"  style="width:310px; margin-left: 55px;">
+			       			  </td>  
+							  <td colspan="3"  style="padding-left: 31px;">
+							  		<span style="font-size: 14px; font-weight:bold;">직책(위)</span>
+								  	<select id="position" name="position" value="0" style="width:310px; margin-left: 25px;">
+			       						<option value="-">선택하세요</option>
+			       						<option value="1">관리소장</option>
+			       						<option value="2">관리과장</option>
+			       						<option value="3">관리주임</option>
+			       						<option value="4">기술과장</option>
+			       						<option value="5">경리(회계)</option>
+			       						<option value="6">서무직</option>
+			       						<option value="7">전기직</option>
+			       						<option value="8">전기과장</option>
+			       						<option value="9">전기기사</option>
+			       						<option value="10">설비직(영선)</option>
+			       						<option value="11">시설과장</option>
+			       						<option value="12">시설기사</option>
+			       						<option value="13">기전직</option>
+			       						<option value="14">조경</option>
+			       						<option value="15">경비</option>
+			       						<option value="16">청소</option>
+			       						<option value="17">기타</option>
+			       					</select>
+			       			  </td> 
+							</tr>
+							<tr>
+							  <td colspan="5"> 
+							  		<span style="font-size: 14px; font-weight:bold;">소재지(시/구)</span>
+								  	<input type="text" name="location" id="location" style="width: 754px !important; margin-left: 10px;">
+			       			  </td>  
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+				<div class="d-flex justify-content-end"  style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:20px;">삭제</button>
+				</div>
+			</form>
+			<div class="table-responsive">
+			<div>
+	       		<table class="grid" style="margin:15px 20px !important;">
+		       			<colgroup>
+							<col style="width:100px">
+		       				<col style="width:100px">
+		       				<col style="width:200px">
+		       				<col style="width:100px">
+		       				<col style="width:200px">
+		       				<col style="width:120px">
+		       				<col style="width:120px">
+		       				<col style="width:120px">
+						</colgroup>
+	       				<thead>
+	       					<tr>
+	       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">입사일</th>
+	       						<th scope="col">퇴사일</th>
+	       						<th scope="col">사업장명</th>
+	       						<th scope="col">구분</th>
+	       						<th scope="col">소재지(시/구)</th>
+	       						<th scope="col">새대수</th>
+	       						<th scope="col">직책(위)</th>
+	       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">관리회사명</th>
+	       					</tr>
+	       				</thead>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td colspan="8">등록된 데이터가 없습니다.</td>
+	       					</tr>
+	       				</tbody>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       					</tr>
+	       				</tbody>
+	       			</table>
+	       		</div>
+	       	   </div>
+            </div>
+            
+            
+            
+            <!-- 타업종 경력-->
+            <div>
+            	<h4 style="margin-top:70px !important;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" style="vertical-align: top;" viewBox="0 0 16 16">
+						  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+						</svg> 타업종 경력</h4>
+            	<form>
+            	<div class="table-responsive">
+	            <table style="margin:15px 20px !important;">
+					<colgroup>
+						<col width="30%">
+						<col width="30%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">회사명</span>
+							  	<input type="text" name="otheroffice" id="otheroffice" style="width: 220px;">
+		       			  </td>  
+						  <td colspan="3" style="padding-left: 95px;">
+						  		<span style="font-size: 14px; font-weight:bold;">근무기간</span>
+							  	<input type="date" name="otherjoindate" id="otherjoindate"> -
+	                            <input type="date" name="otherdeparture" id="otherdeparture" style="margin-left:0;">
+						  </td>
+						</tr>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">부서명</span>
+							  	<input type="text" name="departmentname" id="departmentname">
+		       			  </td>  
+						  <td style="padding-left: 0;">
+						  		<span style="font-size: 14px; font-weight:bold;">직책(위)</span>
+							  	<input type="text" name="otherposition" id="otherposition">
+		       			  </td> 
+						  <td style="padding-left: 6px;">
+						  		<span style="font-size: 14px; font-weight:bold;">담당업무</span>
+							  	<input type="text" name="responsibilities" id="responsibilities">
+		       			  </td> 
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="d-flex justify-content-end" style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:20px;">삭제</button>
+				</div>
+			</form>
+			
+			<div>
+	       		<table class="grid" style="margin:15px 20px !important;">
+		       			<colgroup>
+							<col style="width:130px">
+		       				<col style="width:130px">
+		       				<col style="width:200px">
+		       				<col style="width:200px">
+		       				<col style="width:170px">
+		       				<col style="width:170px">
+						</colgroup>
+	       				<thead>
+	       					<tr>
+	       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">입사일</th>
+	       						<th scope="col">퇴사일</th>
+	       						<th scope="col">회사명</th>
+	       						<th scope="col">부서명</th>
+	       						<th scope="col">직책(위)</th>
+	       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">담당업무</th>
+	       					</tr>
+	       				</thead>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td colspan="6">등록된 데이터가 없습니다.</td>
+	       					</tr>
+	       				</tbody>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">*****</td>
+	       					</tr>
+	       				</tbody>
+	       			</table>
+	       		</div>
+            </div>
+            
+            
+            
+             <!-- 기타 경력-->
+            <div>
+            	<h4 style="margin-top:70px !important;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" style="vertical-align: top;" viewBox="0 0 16 16">
+					  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+					</svg> 기타 경력</h4>
+            	<form>
+            	<div class="table-responsive">
+	            <table style="margin:15px 20px !important;">
+					<tbody>
+						<tr>
+						  <td>
+						  	  	<span style="font-size: 14px; font-weight:bold;">구분</span>
+							  	<select id="career" name="career" value="0" style="margin-left: 43px;">
+		       						<option value="-">선택하세요</option>
+		       						<option value="1">알바 등 일용직</option>
+		       						<option value="2">해외체류</option>
+		       						<option value="3">학업</option>
+		       						<option value="4">자기개발</option>
+		       						<option value="5">건강요양</option>
+		       						<option value="6">개인사업</option>
+		       						<option value="7">기타</option>
+		       					</select>
+		       					<input type="text" name="careerinput" id="careerinput" style="margin-left: 0; padding: 7px 10px 4px; width:187px;" disabled>
+		       			  </td> 
+						</tr>
+						
+						<tr>
+						  <td>
+						  	  	<span style="font-size: 14px; font-weight:bold;">근무기간</span>
+							  	<input type="date" name="startdate" id="startdate"> -
+	                            <input type="date" name="enddate" id="enddate"  style="margin-left: 0;">
+						  </td>
+						</tr>
+						  
+						<tr>
+							<td colspan="3">
+									<span style="font-size: 14px; font-weight:bold;">세부내역</span>
+									<input type="text" name="details" id="details" style="width: 774px;">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="d-flex justify-content-end" style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:20px;">삭제</button>
+				</div>
+			</form>
+			
+			<div>
+	       		<table class="grid" style="margin:15px 20px !important;">
+		       			<colgroup>
+							<col width="260px">
+							<col width="150px">
+							<col width="150px">
+							<col width="440px">
+						</colgroup>
+	       				<thead>
+	       					<tr>
+	       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">구분</th>
+	       						<th scope="col">시작일</th>
+	       						<th scope="col">종료일</th>
+	       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">세부내역</th>
+	       					</tr>
+	       				</thead>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td colspan="4">등록된 데이터가 없습니다.</td>
+	       					</tr>
+	       				</tbody>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td class="gridtext">*****</td>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">*****</td>
+	       					</tr>
+	       				</tbody>
+	       			</table>
+	       		</div>
+	       	</div>
+	       	
+	       	<div class="d-flex justify-content-center mt-5">
+	       		<button type="button" class="btn btn-primary" style="width:150px;font-size:14px;">경력등록 확인</button>
+	       	</div>
+	       	<div class="text-center mt-2">
+	       		<span style="font-size:14px; color:#45aaf2;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="vertical-align: text-bottom !important;" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+					  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+					  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+					</svg> 입력한 경력은 3개월이상 공백이 있으면 안됩니다. 기타경력에서 공백이 없도록 추가등록 바랍니다.</span>
+	       	</div>
+        </div>
+        </div>
+
+
+
+
+        <!-- 가족사항 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+            <h3><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;가족사항</h3>
+            <form>
+            <div class="table-responsive">
+	            <table style="margin-bottom:20px !important;">
+					<colgroup>
+						<col width="6%">
+						<col width="20%">
+						<col width="6%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+						  <td style="padding-right:10px;">
+						  	  	<span style="font-size: 14px; font-weight:bold;">관계</span>
+							  	<select id="familyrelations" name="familyrelations" value="0">
+		       						<option value="-">선택하세요</option>
+		       						<option value="1">부</option>
+		       						<option value="2">모</option>
+		       						<option value="3">배우자</option>
+		       						<option value="4">자녀</option>
+		       						<option value="5">형제</option>
+		       						<option value="6">자매</option>
+		       						<option value="7">조부모</option>
+		       					</select>
+		       			  </td>  
+						  <td style="padding:0 14px;">
+						  		<span style="font-size: 14px; font-weight:bold;">성명</span>
+	                            <input type="text" name="familyname" id="familyname" style="margin-left: 5px;">
+						  </td>
+						  <td style="padding:0 15px;">
+						  		<span style="font-size: 14px; font-weight:bold;">출생연도</span>
+	                            <input type="date" name="yearofbirth" id="yearofbirth" style="margin-left: 5px;">
+						  </td>
+						  <td style="padding-left:10px;">
+								<input class="form-check-input" type="checkbox" name="livingtogether" id="livingtogether" style="padding: 0 !important; margin:0 5px !important; vertical-align: baseline;">
+								<label class="form-check-label" for="livingtogether" style="font-size:15px; font-weight:bold;">동거여부</label>
+						  </td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="d-flex justify-content-end" style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:5px;">삭제</button>
+				</div>
+			</form>
+			
+			<div>
+	       		<table class="grid">
+		       			<colgroup>
+							<col width="250px">
+							<col width="250px">
+							<col width="250px">
+							<col width="246px">
+						</colgroup>
+	       				<thead>
+	       					<tr>
+	       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">관계</th>
+	       						<th scope="col">성명</th>
+	       						<th scope="col">출생연도</th>
+	       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">동거여부</th>
+	       					</tr>
+	       				</thead>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td colspan="4">등록된 데이터가 없습니다.</td>
+	       					</tr>
+	       				</tbody>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td class="gridtext">부</td>
+	       						<td class="gridtext">***</td>
+	       						<td class="gridtext">230303</td>
+	       						<td class="gridtext">v</td>
+	       					</tr>
+	       				</tbody>
+	       			</table>
+	       		</div>
+	       	</div>
+        </div>
+
+
+
+
+        <!-- 추천인 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+            <h3><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;추천인</h3>
+            <form>
+               <div class="table-responsive">
+	            <table style="margin-bottom:20px !important;">
+					<colgroup>
+						<col width="30%">
+						<col width="30%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+						  <td>
+						  		<span style="font-size: 14px; font-weight:bold;">성명</span>
+							  	<input type="text" name="support" id="support">
+		       			  </td>  
+						  <td style="padding-left:43px;">
+						  		<span style="font-size: 14px; font-weight:bold;">근무부서</span>
+	                            <input type="text" name="supportdepartment" id="supportdepartment">
+						  </td>
+						  <td style="padding-left:32px;">
+						  		<span style="font-size: 14px; font-weight:bold;">직책(위)</span>
+	                            <input type="text" name="supportposition" id="supportposition">
+						  </td>
+						</tr>
+						<tr>
+						  <td colspan="3">
+						  		<span style="font-size: 14px; font-weight:bold;">추천인과의 관계</span>
+							  	<input type="text" name="recommender" id="recommender" style="width: 290px;">
+		       			  </td>  
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				<div class="d-flex justify-content-end" style="margin-top: 5px;">
+					<button type="reset" class="btn btn-sm" style="border:1px solid #13a15a; color: #13a15a; margin-right:5px;">초기화</button>
+					<button type="button" class="btn btn-sm" style="background-color: #13a15a; color: #fff; margin-right:5px;">저장</button>
+					<button type="button" class="btn btn-sm" style="background-color: red; color: #fff; margin-right:5px;">삭제</button>
+				</div>
+			</form>
+			
+			<div>
+	       		<table class="grid">
+		       			<colgroup>
+							<col style="width:250px">
+		       				<col style="width:250px">
+		       				<col style="width:250px">
+		       				<col style="width:246px">
+						</colgroup>
+	       				<thead>
+	       					<tr>
+	       						<th scope="col" style="border-left: 1px solid #a3adb9 !important;">성명</th>
+	       						<th scope="col">근무부서</th>
+	       						<th scope="col">직책(위)</th>
+	       						<th scope="col" style="border-right: 1px solid #a3adb9 !important;">추천인과의 관계</th>
+	       					</tr>
+	       				</thead>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td colspan="4">등록된 데이터가 없습니다.</td>
+	       					</tr>
+	       				</tbody>
+	       				<tbody style="display:none;">
+	       					<tr>
+	       						<td class="gridtext">***</td>
+	       						<td class="gridtext">***</td>
+	       						<td class="gridtext">***</td>
+	       						<td class="gridtext">***</td>
+	       					</tr>
+	       				</tbody>
+	       			</table>
+	       		</div>
+	       	</div>
+        </div>
+
+
+
+
+
+        <!-- 희망근무 지역 -->
+        <div class="row mx-0 pt-2 pl-0 md-2">
+        	<div class="col-12 col-lg-12 px-0">
+            <h3 style="padding-bottom:2px;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;희망근무 지역 <span style="color:#f00; font-size: 20px; vertical-align: middle;">*</span></h3>
+            <div class="table-responsive">  
+            
+            
+            <!-- 지역선택 -->
+            <div class="d-flex mb-2" style="font-size: 15px; padding: 0 20px 0 40px;">
+					<span style="margin:12px 10px !important; font-weight: bold;">지역</span>
+					<select id="region" name="region" value="0">
+						<option value="-">선택하세요</option>
+						<option value="1">전체</option>
+						<option value="2">서울</option>
+						<option value="3">경기</option>
+						<option value="4">부산</option>
+						<option value="5">인천</option>
+						<option value="6">대구</option>
+						<option value="7">광주</option>
+						<option value="8">대전</option>
+						<option value="9">울산</option>
+						<option value="10">세종</option>
+						<option value="11">강원</option>
+						<option value="12">충북</option>
+						<option value="13">충남</option>
+						<option value="14">전북</option>
+						<option value="15">전남</option>
+						<option value="16">경북</option>
+						<option value="17">경남</option>
+						<option value="18">제주</option>
+					</select>
+			</div>						
+			
+			<div class="border mb-3" style="width: 900px; height:270px; margin: auto; position:relative;">
+			
+			<!-- 서울 체크버튼 -->
+			<div style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seoultotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="seoultotal" style="display: inline-block; font-size: 15px;">서울전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gangnam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gangnam" style="display: inline-block; font-size: 15px;">강남구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gandong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gandong" style="display: inline-block; font-size: 15px;">강동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gangbuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gangbuk" style="display: inline-block; font-size: 15px;">강북구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gangseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gangseo" style="display: inline-block; font-size: 15px;">강서구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwanwak" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwanwak" style="display: inline-block; font-size: 15px;">관악구</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwanjin" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="gwanjin" style="display: inline-block;  font-size: 15px;">광진구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="guro" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="guro" style="display: inline-block; font-size: 15px;">구로구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="geumcheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="geumcheon" style="display: inline-block; font-size: 15px;">금천구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="nowon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="nowon" style="display: inline-block; font-size: 15px;">노원구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dobong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dobong" style="display: inline-block; font-size: 15px;">도봉구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dongdaemun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dongdaemun" style="display: inline-block; font-size: 15px;">동대문구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dongjak" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="dongjak" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">동작구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="mapo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="mapo" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">마포구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seodaemun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seodaemun" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">서대문구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seocho" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seocho" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">서초구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sungdong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sungdong" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">성동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sungbuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sungbuk" style="display: inline-block; font-size: 15px;">성북구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="songpa" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="songpa" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">송파구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yangchun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yangchun" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">양천구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yeongdeungpo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yeongdeungpo" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">영등포구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yongsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yongsan" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">용산구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="eunpyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="eunpyung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">은평구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jonglo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jonglo" style="display: inline-block; font-size: 15px;">종로구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="seouljunggu" style="padding: 0 !important; vertical-align: middle;  margin: 0 1px 0 30px!important;">
+						<label class="form-check-label" for="seouljunggu" style="display: inline-block; margin-right: 19px !important; font-size: 15px;">중구</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="jungrang" style="padding: 0 !important; vertical-align: middle;   margin-left: 64px!important;">
+						<label class="form-check-label" for="jungrang" style="display: inline-block; font-size: 15px;;">중랑구</label>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 경기 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyeonggitotal" style="padding: 0 !important; vertical-align: middle; ">
+						<label class="form-check-label" for="gyeonggitotal" style="display: inline-block; font-size: 15px;">경기전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gapyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gapyung" style="display: inline-block; font-size: 15px;">가평군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="duckyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="duckyang" style="display: inline-block; font-size: 15px;">고양시 덕양구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ilsandonggu" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ilsandonggu" style="display: inline-block; font-size: 15px;">고양시 일산동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ilsanseogu" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ilsanseogu" style="display: inline-block; font-size: 15px;">고양시 일산서구</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangmeong" style="padding: 0 !important; vertical-align: middle;  ">
+						<label class="form-check-label" for="gwangmeong" style="display: inline-block;  font-size: 15px;">광명시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangju2" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangju2" style="display: inline-block; font-size: 15px;">광주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="guri" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="guri" style="display: inline-block; font-size: 15px;">구리시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gunpo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gunpo" style="display: inline-block; font-size: 15px;">군포시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="kimpo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="kimpo" style="display: inline-block; font-size: 15px;">김포시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="namyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="namyang" style="display: inline-block; font-size: 15px;">남양주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dongducheon" style="padding: 0 !important; vertical-align: middle;  ">
+						<label class="form-check-label" for="dongducheon" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">동두천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="bucheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="bucheon" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">부천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwacheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwacheon" style="display: inline-block; font-size: 15px;">과천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sujung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sujung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">성남시 수정구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="bundang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="bundang" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">성남시 분당구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="seocho" value="" id="jungwon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jungwon" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">성남시 중원구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwonson" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwonson" style="display: inline-block; font-size: 15px;">수원시 권선구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungtong" style="padding: 0 !important; vertical-align: middle; ">
+						<label class="form-check-label" for="yungtong" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">수원시 영통구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jangan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jangan" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">수원시 장안구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="paldal" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="paldal" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">수원시 팔달구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="siheung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="siheung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">시흥시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="danwon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="danwon" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">안산시 단원구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sangrok" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sangrok" style="display: inline-block; font-size: 15px;">안산시 상록구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ansung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ansung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">안성시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dongan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dongan" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">안양시 동안구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="manan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="manan" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">안양시 만안구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yangju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yangju" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">양주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yangpyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yangpyung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">양평군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yeoju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yeoju" style="display: inline-block; font-size: 15px;">여주시</label>
+					</div>
+					
+					
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yeoncheon" style="padding: 0 !important; vertical-align: middle; ">
+						<label class="form-check-label" for="yeoncheon" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">연천군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="osan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="osan" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">오산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="kiheung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="kiheung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">용인시 기흥구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="cheoin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="cheoin" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">용인시 처인구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="suji" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="suji" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">용인시 수지구</label>
+					</div>
+					
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="uiwang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="uiwang" style="display: inline-block; font-size: 15px;">의왕시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="uijungbu" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="uijungbu" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">의정부시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ichun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ichun" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">이천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="paju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="paju" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">파주시</label>
+					</div>	
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="pyungtaek" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="pyungtaek" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">평택시</label>
+					</div>
+					
+					
+				</div>
+				<div class="d-flex">
+					<div >
+						<input class="form-check-input" type="checkbox" value="" id="pochun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="pochun" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">포천시</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="hanam" style="padding: 0 !important; vertical-align: middle; margin-left: 103px !important;">
+						<label class="form-check-label" for="hanam" style="display: inline-block; font-size: 15px;">하남시</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="hwasung" style="padding: 0 !important; vertical-align: middle;  margin-left: 116px !important;">
+						<label class="form-check-label" for="hwasung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">화성시</label>
+					</div>		
+				</div>
+			</div>
+			
+			
+			<!-- 부산 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding:  20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busantotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="busantotal" style="display: inline-block; font-size: 15px;">부산전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busangangseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="busangangseo" style="display: inline-block; font-size: 15px;">강서구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="geumgjung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="geumgjung" style="display: inline-block; font-size: 15px;">금정구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jijang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jijang" style="display: inline-block; font-size: 15px;">기장군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busannam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="busannam" style="display: inline-block; font-size: 15px;">남구</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busandong" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="busandong" style="display: inline-block; font-size: 15px;">동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dongrae" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dongrae" style="display: inline-block;  font-size: 15px;">동래구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busanjin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="busanjin" style="display: inline-block; font-size: 15px;">부산진구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busanbuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="busanbuk" style="display: inline-block; font-size: 15px;">북구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sasang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sasang" style="display: inline-block; font-size: 15px;">사상구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="saha" style="padding: 0 !important; vertical-align: middle; margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="saha" style="display: inline-block; font-size: 15px;">사하구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="busanseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="busanseo" style="display: inline-block; font-size: 15px;">서구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="suyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="suyung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">수영구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungjae" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungjae" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">연제구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yeongdo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yeongdo" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">영도구</label>
+					</div>
+				</div>
+				<div  class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="busanjung" style="padding: 0 !important; vertical-align: middle; margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="busanjung" style="display: inline-block; margin-right: 10px !important; font-size: 15px;">중구</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="haewundae" style="padding: 0 !important; vertical-align: middle; margin-left: 104px;">
+						<label class="form-check-label" for="haewundae" style="display: inline-block; font-size: 15px;">해운대구</label>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 인천 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding:  20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="incheontotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="incheontotal" style="display: inline-block; font-size: 15px;">인천전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwanghwa" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwanghwa" style="display: inline-block; font-size: 15px;">강화군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyeyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gyeyang" style="display: inline-block; font-size: 15px;">계양구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="muchuhol" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="muchuhol" style="display: inline-block; font-size: 15px;">미추홀구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="namdong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="namdong" style="display: inline-block; font-size: 15px;">남동구</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="incheondong" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="incheondong" style="display: inline-block; font-size: 15px;">동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="bupyeong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="bupyeong" style="display: inline-block;  font-size: 15px;">부평구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="incheonseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="incheonseo" style="display: inline-block; font-size: 15px;">서구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yeonsu" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yeonsu" style="display: inline-block; font-size: 15px;">연수구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="wongjin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="wongjin" style="display: inline-block; font-size: 15px;">옹진군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="incheongjung" style="padding: 0 !important; vertical-align: middle; margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="incheongjung" style="display: inline-block; font-size: 15px;">중구</label>
+					</div>
+				</div>
+
+			</div>
+			
+			<!-- 대구 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daegutotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="daegutotal" style="display: inline-block; font-size: 15px;">대구전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daegunam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daegunam" style="display: inline-block; font-size: 15px;">남구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dalseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dalseo" style="display: inline-block; font-size: 15px;">달서구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dalseog" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dalseog" style="display: inline-block; font-size: 15px;">달성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daegudong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daegudong" style="display: inline-block; font-size: 15px;">동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daegubuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daegubuk" style="display: inline-block; font-size: 15px; ">북구</label>
+					</div>
+				</div>
+
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="daeguseo" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="daeguseo" style="display: inline-block; font-size: 15px; margin-right:69px">서구</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="susung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="susung" style="display: inline-block; font-size: 15px; margin-right:71px">수성구</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="daegujung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daegujung" style="display: inline-block; font-size: 15px;">중구</label>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- 광주 체크버튼 -->
+			<div  style="width: 85%;margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangjutotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="gwangjutotal" style="display: inline-block; font-size: 15px;">광주전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangsan" style="display: inline-block; font-size: 15px;">광산구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangjunam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangjunam" style="display: inline-block; font-size: 15px;">남구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangjuseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangjuseo" style="display: inline-block; font-size: 15px;">동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangjubuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangjubuk" style="display: inline-block; font-size: 15px;">북구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangjuseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangjuseo" style="display: inline-block; font-size: 15px;">서구</label>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 대전 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daejuntotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="daejuntotal" style="display: inline-block; font-size: 15px;">대전전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daeduk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daeduk" style="display: inline-block; font-size: 15px;">대덕구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daejundong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daejundong" style="display: inline-block; font-size: 15px;">동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daejunseo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daejunseo" style="display: inline-block; font-size: 15px;">서구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yusung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yusung" style="display: inline-block; font-size: 15px;">유성구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="daejunjung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="daejunjung" style="display: inline-block; font-size: 15px;">중구</label>
+					</div>
+					
+					</div>
+
+				</div>
+			
+			<!-- 울산 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ulsantotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="ulsantotal" style="display: inline-block; font-size: 15px;">울산전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ulsannam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ulsannam" style="display: inline-block; font-size: 15px;">남구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ulsandong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ulsandong" style="display: inline-block; font-size: 15px;">동구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ulsanbuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ulsanbuk" style="display: inline-block; font-size: 15px;">북구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="wulju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="wulju" style="display: inline-block; font-size: 15px;">울주군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ulsanjung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ulsanjung" style="display: inline-block; font-size: 15px;">중구</label>
+					</div>
+					
+					</div>
+
+				</div>
+			
+			<!-- 세종 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="sejongtotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="sejongtotal" style="display: inline-block; font-size: 15px;">세종전체</label>
+					</div>
+				</div>
+			</div>
+				
+			<!-- 강원 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gawngwontotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="gawngwontotal" style="display: inline-block; font-size: 15px;">강원전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gangreung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gangreung" style="display: inline-block; font-size: 15px;">강릉시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gosung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gosung" style="display: inline-block; font-size: 15px;">고성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="donghae" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="donghae" style="display: inline-block; font-size: 15px;">동해시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="samchuck" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="samchuck" style="display: inline-block; font-size: 15px;">삼척시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sokcho" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sokcho" style="display: inline-block; font-size: 15px;">속초시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yanggu" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="yanggu" style="display: inline-block; font-size: 15px;">양구군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yangyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yangyang" style="display: inline-block; font-size: 15px;">양양군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungwol" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungwol" style="display: inline-block; font-size: 15px;">영월군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="wonju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="wonju" style="display: inline-block; font-size: 15px;">원주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="inje" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="inje" style="display: inline-block; font-size: 15px;">인제군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="junsun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="junsun" style="display: inline-block; font-size: 15px;">정선군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="cheolwon" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="cheolwon" style="display: inline-block; font-size: 15px;">철원군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chuncheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="chuncheon" style="display: inline-block; font-size: 15px;">춘천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="taebaek" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="taebaek" style="display: inline-block; font-size: 15px;">태백시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="pyungchang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="pyungchang" style="display: inline-block; font-size: 15px;">평창군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="hongchun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="hongchun" style="display: inline-block; font-size: 15px;">홍천군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="hwachun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="hwachun" style="display: inline-block; font-size: 15px;">화천군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="hwaengsung" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="hwaengsung" style="display: inline-block; font-size: 15px;">횡성군</label>
+					</div>
+				</div>
+
+			</div>
+			
+			
+			<!-- 충북 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+ 
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chungbuktotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="chungbuktotal" style="display: inline-block; font-size: 15px;">충북전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwusan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwusan" style="display: inline-block; font-size: 15px;">괴산군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="danyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="danyang" style="display: inline-block; font-size: 15px;">단양군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="boeun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="boeun" style="display: inline-block; font-size: 15px;">보은군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungdong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungdong" style="display: inline-block; font-size: 15px;">영동군</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yokchun" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="yokchun" style="display: inline-block; font-size: 15px;">옥천군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="umsung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="umsung" style="display: inline-block;  font-size: 15px;">음성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jechun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jechun" style="display: inline-block; font-size: 15px;">제천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jeungpyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jeungpyung" style="display: inline-block; font-size: 15px;">증평군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jincheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jincheon" style="display: inline-block; font-size: 15px;">진천군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chungwon" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="chungwon" style="display: inline-block; font-size: 15px;">청원군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sangdang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sangdang" style="display: inline-block;  font-size: 15px;">청주시 상당구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="heungduk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="heungduk" style="display: inline-block; font-size: 15px;">청주시 흥덕구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seowon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seowon" style="display: inline-block; font-size: 15px;">청주시 서원구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chungwon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="chungwon" style="display: inline-block; font-size: 15px;">청주시 청원구</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="chungju" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="chungju" style="display: inline-block; font-size: 15px;">충주시</label>
+					</div>
+
+				</div>
+
+			</div>
+			
+			<!-- 충남 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chungnamtotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="chungnamtotal" style="display: inline-block; font-size: 15px;">충남전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyeryong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gyeryong" style="display: inline-block; font-size: 15px;">계룡시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gongju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gongju" style="display: inline-block; font-size: 15px;">공주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="geumsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="geumsan" style="display: inline-block; font-size: 15px;">금산군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="nonsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="nonsan" style="display: inline-block; font-size: 15px;">논산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dangjin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dangjin" style="display: inline-block; font-size: 15px;">당진시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="boryung" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="boryung" style="display: inline-block; font-size: 15px;">보령시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="buyeo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="buyeo" style="display: inline-block; font-size: 15px;">부여군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seosan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seosan" style="display: inline-block; font-size: 15px;">서산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seochun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seochun" style="display: inline-block; font-size: 15px;">서천군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="asan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="asan" style="display: inline-block; font-size: 15px;">아산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungi" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungi" style="display: inline-block; font-size: 15px;">연기군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yesan" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 10px!important;">
+						<label class="form-check-label" for="yesan" style="display: inline-block; font-size: 15px;">예산군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="cheonandongnam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="cheonandongnam" style="display: inline-block; font-size: 15px;">천안시 동남구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="cheongyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="cheongyang" style="display: inline-block; font-size: 15px;">청양군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="taean" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="taean" style="display: inline-block; font-size: 15px;">태안군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="hongsung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="hongsung" style="display: inline-block; font-size: 15px;">홍성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seobuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seobuk" style="display: inline-block; font-size: 15px;">천안시 서북구</label>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 전북 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+ 
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="junbuktotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="junbuktotal" style="display: inline-block; font-size: 15px;">전북전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gochang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gochang" style="display: inline-block; font-size: 15px;">고창군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gunsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gunsan" style="display: inline-block; font-size: 15px;">군산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="kimje" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="kimje" style="display: inline-block; font-size: 15px;">김제시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="namwon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="namwon" style="display: inline-block; font-size: 15px;">남원시</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="muju" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="muju" style="display: inline-block; font-size: 15px;">무주군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="buan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="buan" style="display: inline-block;  font-size: 15px;">부안군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sunchang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sunchang" style="display: inline-block; font-size: 15px;">순창군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="wanju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="wanju" style="display: inline-block; font-size: 15px;">완주군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="iksan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="iksan" style="display: inline-block; font-size: 15px;">익산시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="imsil" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="imsil" style="display: inline-block; font-size: 15px;">임실군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jangsu" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jangsu" style="display: inline-block;  font-size: 15px;">장수군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="dukjin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="dukjin" style="display: inline-block; font-size: 15px;">전주시 덕진구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="wansan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="wansan" style="display: inline-block; font-size: 15px;">전주시 완산구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jungeup" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jungeup" style="display: inline-block; font-size: 15px;">정읍시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="jinan" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="jinan" style="display: inline-block; font-size: 15px;">진안군</label>
+					</div>
+
+				</div>
+
+			</div>
+			
+			<!-- 전남 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+ 
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="junnamtotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="junnamtotal" style="display: inline-block; font-size: 15px;">전남전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ganjin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ganjin" style="display: inline-block; font-size: 15px;">강진군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="goheung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="goheung" style="display: inline-block; font-size: 15px;">고흥군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="goksung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="goksung" style="display: inline-block; font-size: 15px;">곡성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gwangyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gwangyang" style="display: inline-block; font-size: 15px;">광양시</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gure" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="gure" style="display: inline-block; font-size: 15px;">구례군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="naju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="naju" style="display: inline-block;  font-size: 15px;">나주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="namyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="namyang" style="display: inline-block; font-size: 15px;">담양군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="mokpo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="mokpo" style="display: inline-block; font-size: 15px;">목포시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="muan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="muan" style="display: inline-block; font-size: 15px;">무안군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="bosung" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="bosung" style="display: inline-block; font-size: 15px;">보성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sunchun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sunchun" style="display: inline-block;  font-size: 15px;">순천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sinan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sinan" style="display: inline-block; font-size: 15px;">신안군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yeosu" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yeosu" style="display: inline-block; font-size: 15px;">여수시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yunggwang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yunggwang" style="display: inline-block; font-size: 15px;">영광군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungam" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="yungam" style="display: inline-block; font-size: 15px;">영암군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="wando" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="wando" style="display: inline-block;  font-size: 15px;">완도군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jangsung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jangsung" style="display: inline-block; font-size: 15px;">장성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jangheung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jangheung" style="display: inline-block; font-size: 15px;">장흥군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jindo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jindo" style="display: inline-block; font-size: 15px;">진도군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="hampyung" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="hampyung" style="display: inline-block; font-size: 15px; margin-right:84px">함평군</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="haenam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="haenam" style="display: inline-block;  font-size: 15px; margin-right:100px">해남군</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="hwasun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="hwasun" style="display: inline-block; font-size: 15px;">화순군</label>
+					</div>
+				</div>
+
+			</div>
+			
+			<!-- 경북 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+ 
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyungbuktotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="gyungbuktotal" style="display: inline-block; font-size: 15px;">경북전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyungsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gyungsan" style="display: inline-block; font-size: 15px;">경산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyungju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gyungju" style="display: inline-block; font-size: 15px;">경주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="goryung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="goryung" style="display: inline-block; font-size: 15px;">고령군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gumi" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gumi" style="display: inline-block; font-size: 15px;">구미시</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gunwi" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="gunwi" style="display: inline-block; font-size: 15px;">군위군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="kimcheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="kimcheon" style="display: inline-block;  font-size: 15px;">김천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="munkyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="munkyung" style="display: inline-block; font-size: 15px;">문경시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="bonghwa" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="bonghwa" style="display: inline-block; font-size: 15px;">봉화군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sangju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sangju" style="display: inline-block; font-size: 15px;">상주시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sungju" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="sungju" style="display: inline-block; font-size: 15px;">성주군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="andong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="andong" style="display: inline-block;  font-size: 15px;">안동시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungduk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungduk" style="display: inline-block; font-size: 15px;">영덕군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungyang" style="display: inline-block; font-size: 15px;">영양군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yungju" style="display: inline-block; font-size: 15px;">영주시</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yungchun" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="yungchun" style="display: inline-block; font-size: 15px;">영천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yechun" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="yechun" style="display: inline-block;  font-size: 15px;">예천군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="ulreung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="ulreung" style="display: inline-block; font-size: 15px;">울릉군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="uljin" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="uljin" style="display: inline-block; font-size: 15px;">울진군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="uisung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="uisung" style="display: inline-block; font-size: 15px;">의성군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chungdo" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="chungdo" style="display: inline-block; font-size: 15px;">청도군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chungsong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="chungsong" style="display: inline-block;  font-size: 15px;">청송군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="chilgok" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="chilgok" style="display: inline-block; font-size: 15px;">칠곡군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="pohangnam" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="pohangnam" style="display: inline-block; font-size: 15px;">포항시 남구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="pohangbuk" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="pohangbuk" style="display: inline-block; font-size: 15px;">포항시 북구
+						</label>
+					</div>
+				</div>
+
+			</div>
+			
+			
+			<!-- 경남 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+ 
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyungnamtotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="gyungnamtotal" style="display: inline-block; font-size: 15px;">경남전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="guje" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="guje" style="display: inline-block; font-size: 15px;">거제시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="guchang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="guchang" style="display: inline-block; font-size: 15px;">거창군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="gyungnamgosung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="gyungnamgosung" style="display: inline-block; font-size: 15px;">고성군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="kimhae" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="kimhae" style="display: inline-block; font-size: 15px;">김해시</label>
+					</div>
+				</div>
+				<div class="d-flex" >
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="namhae" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="namhae" style="display: inline-block; font-size: 15px;">남해군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="masanwh" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="masanwh" style="display: inline-block;  font-size: 15px;">창원시 마산회원구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="milyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="milyang" style="display: inline-block; font-size: 15px;">밀양시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sacheon" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sacheon" style="display: inline-block; font-size: 15px;">사천시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="sanchung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="sanchung" style="display: inline-block; font-size: 15px;">산청군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="yangsan" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="yangsan" style="display: inline-block; font-size: 15px;">양산시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="uiryung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="uiryung" style="display: inline-block;  font-size: 15px;">의령군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jinju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jinju" style="display: inline-block; font-size: 15px;">진주시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jinhae" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jinhae" style="display: inline-block; font-size: 15px;">창원시 진해구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="changnyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="changnyung" style="display: inline-block; font-size: 15px;">창녕군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="uichang" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="uichang" style="display: inline-block; font-size: 15px;">창원시 의창구</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="tongyung" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="tongyung" style="display: inline-block;  font-size: 15px;">통영시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="hadong" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="hadong" style="display: inline-block; font-size: 15px;">하동군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="haman" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="haman" style="display: inline-block; font-size: 15px;">함안군</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="hamyang" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="hamyang" style="display: inline-block; font-size: 15px;">함양군</label>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="hapcheon" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="hapcheon" style="display: inline-block; font-size: 15px; margin-right:84px">합천군</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="masanhapo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="masanhapo" style="display: inline-block;  font-size: 15px; margin-right:19px">창원시 마산합포구</label>
+					</div>
+					<div>
+						<input class="form-check-input" type="checkbox" value="" id="changwonsungsan" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="changwonsungsan" style="display: inline-block; font-size: 15px;">창원시 성산구</label>
+					</div>
+				</div>
+
+			</div>
+			
+			
+			<!-- 제주 체크버튼 -->
+			<div  style="width: 85%; margin: auto; padding: 20px 5px 0; display:none; min-width: 900px !important;">
+
+				<div class="d-flex">
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jejutotal" style="padding: 0 !important; vertical-align: middle;  margin: 0  0  0 30px!important;">
+						<label class="form-check-label" for="jejutotal" style="display: inline-block; font-size: 15px;">제주전체</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="seoguipo" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="seoguipo" style="display: inline-block; font-size: 15px;">서귀포시</label>
+					</div>
+					<div style="flex:1">
+						<input class="form-check-input" type="checkbox" value="" id="jeju" style="padding: 0 !important; vertical-align: middle;">
+						<label class="form-check-label" for="jeju" style="display: inline-block; font-size: 15px;">제주시</label>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		  </div>
+	   </div>
+	</div>
+
+
+
+        <!-- 기타 -->
+        <div class="row mx-0 pt-2 pl-0">
+        	<div class="col-12 col-lg-12 px-0">
+	            <h3 style="padding-bottom:0;"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="#13a15a" class="bi bi-chevron-right" style="vertical-align: baseline !important;font-weight: bold;" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+				</svg>&nbsp;기타 <span style="color:#f00; font-size: 20px; vertical-align: middle;">*</span></h3>
+				<form>
+				<div class="table-responsive">
+				  
+		            <table style="margin-bottom: 15px;">
+						<tbody>
+							<tr>
+							  <td>
+							  	<span style="font-size: 14px; font-weight:bold;">최근 연봉(만원)</span>
+								<input type="text" name="salary" id="salary" style="width:150px;">
+							  </td>  
+							</tr>
+						</tbody>
+					</table>
+					
+					<div>
+						<p style=" padding: 0 0 5px 50px; font-size: 14px; font-weight: bold;">경력 상세기술 <span style="font-size: 13px;">(공백포함 1,500자)</span></p>
+						<div style="height:240px; width: 90%; margin:0 5%;">
+							<textarea name="detailed" id="detailed"></textarea>
+						</div>
+						<div class="text-end" style="font-size: 14px; font-weight: bold; margin-right: 5%; margin-bottom: 20px;"><p>( 0 / 1500 )</p></div>
+					</div>
+				   </div>
+				</form>
+			</div>
+        </div>
+
+
+		<!-- 하단 -->
+       <!--  <div style="display:block; text-align: right; margin-right:50px">
+            <label for="password" style="display: inline-block !important;">문서보관 비밀번호</label>
+            <input type="text" name="password" id="password">
+        </div> -->
+
+        <div class="d-flex fix">
+            <button type="button" class="btn" style="border:1px solid #13a15a; color: #13a15a; background: #fff; width: 100px;">임시저장</button>
+            <button type="button" class="btn bcolor" style="background-color: #13a15a; margin-left:10px;">
+            	<a href="./submissionComplete.html" style="color: #fff; text-decoration:none; padding: 0 70px;">제출</a>
+            </button>
+        </div>  
+        
+      </form>
+     </div>  
+    
+    
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    
+    
+    
+	
+</html>
+
+

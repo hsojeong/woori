@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+
+
+ 	* {
+		word-break: keep-all;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Nanum Gothic', sans-serif;
+	}
+		    
+	.logo {
+		max-width: 1200px;
+		margin: 15px auto 0;
+		padding:0 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	} 
+	
+	 h1 {
+		 text-align:center; 
+		 font-size:18px; 
+		 padding-top: 19px; 
+		 font-weight: bold !important;
+		 }
+		 
+	 h2 {
+		 font-size: 25px;
+		 font-weight: bold;
+		 padding-left: 5px;
+		 margin-top: 20px;
+		 } 
+		
+	h3 {
+		border-bottom: 1px solid #000;
+		padding: 0 0 5px 2px;
+		margin: 10px 0;
+		text-indent: 5px;
+		font-size: 	18px;
+		font-weight: bold;
+	}
+	
+	h4 {
+		text-indent: 10px;
+		font-size: 15px;
+		font-weight: bold;
+		background: #e7eaf0;
+		padding:5px 0;
+		width: 97%;
+   		margin: 20px auto 0;
+	}	 
+		
+	p {
+		margin-bottom:5px !important;
+	}	 
+	
+	.navimenu {
+		position: absolute;
+		top: 100%;
+		right: 60%;
+		transform: translateX(50%);
+		width: 150px !important;
+		font-size:14px;
+		margin: 3px 20px 0 0;
+		display: none;
+		text-align: left;
+		transition: all 2s;
+		}
+		
+	.navimenu > a:hover {
+		  background-color: #dee2e6;
+		}
+		
+	.navihover:hover .navimenu {
+		  display: inline-block;
+	 	}
+	 	
+	.inputerror {
+		border: 1px solid #f00 !important;
+	}
+	
+	.spanerror {
+		  color:#f00; 
+		  font-size:12px; 
+		  position: absolute; 
+		  top: 90%; 
+		  left: 10px;
+		}
+		
+	.inner {
+		 max-width: 1000px;
+		 margin: 0 auto 70px;
+		 overflow-x: hidden;
+	}	
+
+	.pwinner {
+		  max-width:1000px;
+		  margin: 0 auto;
+		    }
+	
+	table {
+		margin : 10px 10px 45px;
+		white-space: nowrap;
+	}
+	
+	td {
+		padding:0 20px 0 40px;
+	}
+		 
+	input  {
+		 margin: 8px 0px 8px 15px;
+		 font-size:13px;
+		 padding: 5px 10px;
+		 border: 1px solid #d3d3d3;
+		 border-radius: 3px;
+		 width: 180px;
+	}
+	
+	select {
+		width : 180px;
+		margin: 5px;
+		font-size:14px;
+		padding : 5px 10px;
+		border-radius: 3px;
+		border:1px solid #d3d3d3;
+		line-height: 1.5;
+	}
+		    
+	textarea {
+		font-size:14px;
+		padding : 15px;
+		border: 1px solid #d3d3d3;
+		border-radius: 3px;
+		width:100%; 
+		height: 230px; 
+		margin-bottom: 20px;
+	}
+	
+	.btn {
+		border-radius: 3px !important;
+	}
+	
+	.bcolor {
+		border-color:#13a15a !important;
+		padding: 0;
+	}
+	
+	
+	input:focus , select:focus , textarea:focus {
+		outline: none;
+	}
+	
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		transition: background-color 5000s ease-in-out 0s;
+		-webkit-transition: background-color 9999s ease-out;
+	}
+				
+	
+	 .grid {
+		border-top: 2px solid #39815d;
+		margin: 20px 0 !important;
+		font-size: 13px; 
+		text-align: center;
+	}
+			
+	.grid td{
+		border-bottom: 1px solid #ddd;
+		padding: 10px 15px !important;
+	}
+	
+	.grid th{
+		background-color: #fafafa;
+		border-bottom: 1px solid #ddd !important;
+		border: none;
+		padding: 10px 15px !important;
+	}
+			
+	.gridtext {
+	    vertical-align:middle;
+	}
+	
+	.fix {
+		position: fixed; 
+		bottom: 0; 
+		left: 0; 
+		justify-content: center; 
+		width:100%; 
+		padding: 15px 0 20px;
+		background:#fff;
+	}   
+	
+	.btn-primary:hover {
+		--bs-btn-hover-bg: #45aaf2;;
+		--bs-btn-hover-border-color: #45aaf2;;
+		--bs-btn-active-bg: #45aaf2;;
+    	--bs-btn-active-border-color: #45aaf2;;
+	}
+	
+	input:disabled {
+		border:none !important;
+		background-color: #f4f4f4 !important;
+		padding: 6px 10px 5px;
+	}
+			
+	.btn-primary {
+		background-color: #45aaf2; 
+		border-color: #45aaf2;
+	}
+	 
+	.page-link {
+		color:#525252;
+	}	
+		
+	.pagination {
+	    --bs-pagination-font-size: 14px;
+	    --bs-pagination-hover-color: #fff;
+	    --bs-pagination-hover-bg: #8ac833;
+	    --bs-pagination-hover-border-color: #dee2e6;
+	    --bs-pagination-focus-color: #fff;
+	    --bs-pagination-focus-bg: #8ac833; 
+	    --bs-pagination-focus-box-shadow: none;
+	    --bs-pagination-active-color: #fff;
+	    --bs-pagination-active-bg: #8ac833;
+	    --bs-pagination-active-border-color: #8ac833; 
+	}			
+		
+		
+	/* 반응형 */	
+	 @media (max-width:1232px) {  
+			.logo {
+	   		padding:0 25px 0 0;
+	    } 
+	}
+	

@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    	 <link href="./css/common.css" rel="stylesheet"/>
+        <title>관리소장 수시지원 시스템</title>
+	    <style>
+			 
+		     h2  {
+				padding-left: 0px;
+				margin-top: 0px;
+				margin-bottom:30px;
+			 } 
+			 
+			 input , select {
+		       	width: 170px !important;
+		        margin: 10px 0px;
+			 }
+			  
+			 .form-check-input {
+			 	width: 15px !important;
+			 	height: 15px !important; 
+			 	vertical-align: text-top; 
+			 	padding:0;
+			 }
+			 
+			 .pfont {
+				  font-size: 12px;
+				  color: #555;
+				  padding-left:41px;
+				}
+				
+			.divmargin {
+				margin-top:80px; 
+				margin-bottom:50px;
+			}	
+			
+			.bsend {
+				font-size:14px; 
+				padding: 4px 40px; 
+				margin: 2px 0 5px;
+			} 
+
+			@media (max-width:1540px) {  
+				.divmargin {
+				margin-top:30px !important; 
+			}
+			}
+			 
+			 
+			 @media (max-width:985px) {  
+				.bsend {
+				margin: 0px 0 8px 44px;
+			} 
+				.bid {
+				margin-right: 7px;
+				}
+			}
+			
+			 @media (max-width:939px) {  
+				.bpadding {
+				padding: 7px 10px 7px 30px !important;
+			}
+			}
+			 
+		</style>
+		
+</head>
+    
+    <body>
+		
+		<!--  header  -->
+		<div class="logo">
+			<div class="d-flex">
+				<img src="./image/logo.png" alt="우리관리 로고" style="width: 150px;">
+				<h1>관리소장 수시지원 시스템</h1>
+			</div>
+		</div>
+		
+		
+
+		 <!-- body --> 
+
+   			 <div class="d-flex justify-content-center align-items-center pwinner divmargin" style="min-width:880px;">
+		  		<div>
+
+				    <form>
+				    
+				      <h2 style="padding-left: 8px;">기본정보</h2>
+				
+					 <div>
+						  <!-- 성명 -->
+					      <div class="bpadding" style="border-top:1px solid #9f9c9c; border-bottom:1px solid #9f9c9c; padding: 7px 60px;">
+							<span style="font-size: 14px; display:inline-flex;">성명</span>
+					        <input type="text" id="registname" style="margin-left: 102px;"> 
+					      </div>
+					      
+					      <!-- 생년월일 -->
+					      <div class="bpadding" style="border-bottom:1px solid #9f9c9c; padding: 7px 60px;">
+							<span style="font-size: 14px; display:inline-flex;">생년월일</span>
+					        <input type="date" id="registbirth" style="margin-left: 74px; margin-right: 198px;"> 
+					        
+					        
+					        <!-- 성별 -->
+					        <span style="font-size: 14px; display:inline-flex;">성별</span>
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left: 50px;" checked>
+							<label class="form-check-label" for="flexRadioDefault1" style="font-size: 14px; color:#555;">남</label>
+
+							<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" style="margin-left: 10px;">
+							<label class="form-check-label" for="flexRadioDefault2" style="font-size: 14px; color:#555;">여</label>
+					      </div>
+					      
+					      	      
+						 	<!-- 이메일(아이디) -->
+					       <div class="d-flex bpadding" style="border-bottom:1px solid #9f9c9c; padding: 10px 60px;">
+								<div class="bid" style="margin-top: 51px;">
+									<span style="font-size: 14px; display:inline-flex;">이메일(아이디)</span>
+								</div>
+								<div>
+									<div>
+								        <input type="text" id="registid" style="margin-left: 44px;"> @
+								        <input type="text" id="registid2">
+								        <select id="registid3" name="registid3" value="0" style="padding: 4px 10px 6px;">
+					       						<option value="-">직접입력</option>
+					       						<option value="1">naver.com</option>
+					       						<option value="2">gmail.com</option>
+					       						<option value="3">daum.net</option>
+					       						<option value="4">hanmail.net</option>
+					       						<option value="5">nate.com</option>
+					       				</select>
+					       				<button type="button" class="btn btn-primary bsend">인증번호 발송</button>
+				       				</div>
+				       				
+				       				<div>
+				       					<input type="text" id="registid4" style="margin-left:44px; margin-top:0;">
+				       					<button type="button" class="btn btn-primary" style="font-size:14px; padding: 4px 20px; margin: 2px 0 5px;">인증</button>
+				       				</div>
+				       				
+				       				<div>
+					       				<p class="pfont">- 본 사이트의 발신메일이 스팸처리 되는 경우가 있으므로 메일 미수신시 스팸메일함을 확인하시기 바랍니다.</p>
+					       				<p class="pfont">- 이메일 주소 및 비밀번호는 지원서 관리 및 결과확인 등 이후 진행을 위하여 반드시 필요하므로 잘 관리해 주시기 바랍니다.</p>
+					       			</div>
+				       			</div>	
+					      </div>
+					      
+					      
+					       <!-- 비밀번호 -->
+					       <div class="d-flex bpadding" style="border-bottom:1px solid #9f9c9c; padding: 7px 60px;">
+								<div style="margin-top: 22px;">
+									<span style="font-size: 14px; display:inline-flex;">비밀번호</span>
+								</div>
+						        <div>
+							        <input type="password" id="registpw" style="margin-left: 81px;"> 
+							        <p class="pfont" style="margin-left: 40px;">- 비밀번호는 8~10자의 영문대문자, 소문자, 숫자를 모두 혼합하여 설정해주세요.</p>
+						        </div>
+					      </div>
+					      
+					       <!-- 비밀번호 확인 -->
+					      <div class="bpadding" style="border-bottom:1px solid #9f9c9c; padding: 7px 60px;">
+								<span style="font-size: 14px; display:inline-flex;">비밀번호 확인</span>
+						        <input type="password" id="registpwcheck" style="margin-left: 43px;"> 
+					      </div>
+					      
+					   </div>   
+				        
+				
+						 <!-- 버튼 -->
+						  <div class="text-center mt-3">
+						      <button class="btn bcolor" type="button" style="background-color: #13a15a;"><a href="./registComplete.html" style="font-size: 16px; text-decoration: none; color: #fff;  padding: 6px 80px; display: block"">등록완료</a></button>
+							  <button class="btn" type="button" style="padding: 0; border:1px solid #13a15a;"><a href="./login.html" style="font-size: 16px; text-decoration: none;  color: #13a15a;  padding: 6px 50px; display: block"">취소</a></button>
+					      </div>
+				      
+				    </form>
+
+		  	 	</div>
+		  	</div>
+		  	
+		  	
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    
+    
+    
+	
+</html>
+
+
